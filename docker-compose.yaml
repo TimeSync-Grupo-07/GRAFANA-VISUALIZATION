@@ -9,6 +9,7 @@ services:
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
       - ./prometheus/alert.rules:/etc/prometheus/alert.rules
+      - ./config/node_exporter_targets.yml:/etc/prometheus/node_exporter_targets.yml
       - prometheus_data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
